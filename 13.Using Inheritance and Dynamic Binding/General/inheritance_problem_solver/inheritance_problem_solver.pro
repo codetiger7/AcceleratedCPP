@@ -1,0 +1,14 @@
+TEMPLATE = app
+CONFIG += console
+CONFIG -= app_bundle
+CONFIG -= qt
+
+SOURCES += main.cpp \
+    core.cpp
+
+include(deployment.pri)
+qtcAddDeployment()
+
+HEADERS += \
+    core.h
+

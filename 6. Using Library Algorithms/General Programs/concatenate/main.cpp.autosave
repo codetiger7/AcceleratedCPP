@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    copy(bottom.begin(), bottom.end(), back_inserter(ret));
+    
+    return 0;
+}
+
