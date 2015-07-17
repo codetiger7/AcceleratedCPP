@@ -8,6 +8,3 @@ SOURCES += main.cpp
 include(deployment.pri)
 qtcAddDeployment()
 
-HEADERS += \
-    box.h
-

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.4.1, 2015-07-15T17:52:45. -->
+<!-- Written by QtCreator 3.4.1, 2015-07-16T15:20:13. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -239,8 +239,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">7_3_generating_a_cross_ref_table</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/brianopedal/qtprojects/Accelerated C++/7. Using Associative Containers/General Programs/7_3_generating_a_cross_ref_table/7_3_generating_a_cross_ref_table.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">7_3_generating_a_cross_ref_table2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/brianopedal/qtprojects/AcceleratedCPP/7. Using Associative Containers/General Programs/7_3_generating_a_cross_ref_table/7_3_generating_a_cross_ref_table.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">7_3_generating_a_cross_ref_table.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>

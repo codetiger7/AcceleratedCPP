@@ -3,11 +3,12 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    split.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    box.h
+    split.h
 
