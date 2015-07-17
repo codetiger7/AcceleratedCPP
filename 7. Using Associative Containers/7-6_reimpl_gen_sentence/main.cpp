@@ -64,15 +64,34 @@ Grammar read_grammar(istream& in )
     Grammar ret;
     string line;
 
+    string rulesarray[] = { "<noun>          cat",
+                               "<noun>          dog",
+                               "<noun>          table",
+                               "<noun-phrase>   <noun>",
+                               "<noun-phrase>   <adjective> <noun-phrase>",
+                               "<adjective>     large",
+                               "<adjective>     brown",
+                               "<adjective>     absurd",
+                               "<verb>          jumps",
+                               "<verb>          sits",
+                               "<location>      on the stairs",
+                               "<location>      under the sky",
+                               "<location>      wherever it wants",
+                               "<sentence>      the <noun-phrase> <verb> <location>" };
+    vector<string> rules(rulesarray, rulesarray + 14);
+
+    vector<string>::const_iterator it = rules.begin();
     // read the input
-    while (getline(in, line))
+    while ( it != rules.end())
     {
         // split the input into words
-        vector<string> entry = split(line);
+        vector<string> entry = split(*it);
 
         if (!entry.empty())
             // use the category to store the associated rule
             ret[entry[0]].push_back( Rule(entry.begin() + 1, entry.end() ));
+
+        ++it;
     }
 
     return ret;
