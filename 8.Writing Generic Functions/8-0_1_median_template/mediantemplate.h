@@ -29,10 +29,4 @@ T median(std::vector<T> v)
 }
 
 
-template <class T>
-T mx(const T& left, const T& right)
-{
-    return left > right ? left : right;
-}
-
 #endif // MEDIANTEMPLATE_H
