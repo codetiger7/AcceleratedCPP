@@ -1,6 +1,7 @@
 #include <vector>
 #include <stdexcept>
 #include <algorithm>
+#include <mediantemplate.h>
 
 using std::vector;
 using std::domain_error;
@@ -23,3 +24,6 @@ T median(std::vector<T> v)
 
     return size % 2 == 0 ? (v[mid] + v[mid-1]) / 2 : v[mid];
 }
+
+
+

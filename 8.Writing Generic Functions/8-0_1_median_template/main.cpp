@@ -17,11 +17,21 @@ int main()
     vector<double> dvec( dAr, dAr + 10);
 
 
-    int imedian = median(ivec);
-//    cout << endl;
-//    cout << "int median: " << imedian << endl;
+    // Display
+    cout << endl;
+    cout << "int median: " <<  median(ivec) << endl;
 
-//    cout << "double median: " << median(dvec) << endl;
+    cout << "double median: " << median(dvec) << endl;
+    cout << endl;
+    cout << endl;
+
+    int first = 7;
+    int second = 9;
+    cout << "Max:" << endl;
+    cout << mx(first, second) << endl;
+    cout << mx(34.9, 5.66) << endl;
+
+
 
     return 0;
 }

@@ -48,10 +48,8 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../8-0_1_median_template/main.cpp \
-		../8-0_1_median_template/mediantemplate.cpp 
-OBJECTS       = main.o \
-		mediantemplate.o
+SOURCES       = ../8-0_1_median_template/main.cpp 
+OBJECTS       = main.o
 DIST          = ../../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.4/clang_64/mkspecs/qdevice.pri \
 		../../../../Qt/5.4/clang_64/mkspecs/features/device_config.prf \
@@ -167,8 +165,7 @@ DIST          = ../../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
 		../../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
 		../../../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
-		../8-0_1_median_template/8-0_1_median_template.pro mediantemplate.h ../8-0_1_median_template/main.cpp \
-		../8-0_1_median_template/mediantemplate.cpp
+		../8-0_1_median_template/8-0_1_median_template.pro mediantemplate.h ../8-0_1_median_template/main.cpp
 QMAKE_TARGET  = 8-0_1_median_template
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = 8-0_1_median_template
@@ -489,9 +486,6 @@ compiler_clean:
 
 main.o: ../8-0_1_median_template/main.cpp ../8-0_1_median_template/mediantemplate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../8-0_1_median_template/main.cpp
-
-mediantemplate.o: ../8-0_1_median_template/mediantemplate.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mediantemplate.o ../8-0_1_median_template/mediantemplate.cpp
 
 ####### Install
 
