@@ -96,10 +96,6 @@ double optimistic_median_analysis(const std::vector<Student_info> &students)
 
 
 
-
-
-
-
 bool did_all_hw(const Student_info& s)
 {
     return ((find(s.homework.begin(), s.homework.end(), 0)) == s.homework.end() );
