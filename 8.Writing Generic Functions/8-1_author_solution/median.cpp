@@ -5,7 +5,7 @@
 using std::domain_error;
 using std::vector;
 
-double median(vector<double>& vec)
+double median(vector<double> vec)
 {
     typedef vector<double>::size_type vec_sz;
 

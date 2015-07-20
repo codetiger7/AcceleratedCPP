@@ -51,11 +51,13 @@ OBJECTS_DIR   = ./
 SOURCES       = ../8-1_author_solution/main.cpp \
 		../8-1_author_solution/student_info.cpp \
 		../8-1_author_solution/median.cpp \
-		../8-1_author_solution/analysis.cpp 
+		../8-1_author_solution/analysis.cpp \
+		../8-1_author_solution/grade.cpp 
 OBJECTS       = main.o \
 		student_info.o \
 		median.o \
-		analysis.o
+		analysis.o \
+		grade.o
 DIST          = ../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/qdevice.pri \
 		../../../../Qt/5.5/clang_64/mkspecs/features/device_config.prf \
@@ -164,10 +166,12 @@ DIST          = ../../../../Qt/5.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.5/clang_64/mkspecs/features/lex.prf \
 		../8-1_author_solution/8-1_author_solution.pro analysis.hpp \
 		student_info.h \
-		median.h ../8-1_author_solution/main.cpp \
+		median.h \
+		grade.h ../8-1_author_solution/main.cpp \
 		../8-1_author_solution/student_info.cpp \
 		../8-1_author_solution/median.cpp \
-		../8-1_author_solution/analysis.cpp
+		../8-1_author_solution/analysis.cpp \
+		../8-1_author_solution/grade.cpp
 QMAKE_TARGET  = 8-1_author_solution
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = 8-1_author_solution
@@ -481,8 +485,12 @@ median.o: ../8-1_author_solution/median.cpp ../8-1_author_solution/median.h
 
 analysis.o: ../8-1_author_solution/analysis.cpp ../8-1_author_solution/analysis.hpp \
 		../8-1_author_solution/median.h \
-		../8-1_author_solution/student_info.h
+		../8-1_author_solution/student_info.h \
+		../8-1_author_solution/grade.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o analysis.o ../8-1_author_solution/analysis.cpp
+
+grade.o: ../8-1_author_solution/grade.cpp ../8-1_author_solution/grade.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o grade.o ../8-1_author_solution/grade.cpp
 
 ####### Install
 

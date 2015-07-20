@@ -3,9 +3,7 @@
 
 #include <vector>
 
-double median(std::vector<double>&);
-
-
+double median(std::vector<double>);
 
 
 #endif // MEDIAN_H
