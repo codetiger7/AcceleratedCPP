@@ -14,5 +14,7 @@ qtcAddDeployment()
 HEADERS += \
     gen_sentence.h \
     xref.h \
-    split.h
+    split.h \
+    random.h \
+    rexref.hpp
 
