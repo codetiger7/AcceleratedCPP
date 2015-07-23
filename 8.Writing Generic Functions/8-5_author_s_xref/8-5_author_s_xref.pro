@@ -9,5 +9,8 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    xref-utils.hpp
+    xref-utils.hpp \
+DEPENDPATH += \
+        ../8-5_author_solution/split.h
+
 
