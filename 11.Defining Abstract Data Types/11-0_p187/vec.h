@@ -6,6 +6,9 @@ template <class T>
 class Vec
 {
 public:
+    Vec& operator=(const Vec&);     // the assingment operator
+    Vec(const Vec& v) { create(v.begin(), v.end()); }          // copy constructor
+
     // typedef definitions §
     typedef T* iterator;
     typedef const T* const_iterator;
@@ -18,11 +21,21 @@ public:
     Vec() { create(); }
     explicit Vec(std::size_t n, const T& val = T())  { create(n, val); }
 
-    // new operations: start size and index
-    size_type sice()
+    size_type size() const { return limit-data; }
+
+    T& operator[](size_type i)  { return data[i]; }
+    const T& operator[](size_type i) const {return data[i]; }
+
+    // new functions to return iterators
+    iterator begin() { return data; }
+    const_iterator begin() const { return data; }
+
+    iterator end() { return limit; }
+    const_iterator end() const { return limit; }
+
 private:
-    T* data;        // first element in the Vec
-    T* limit;       // one past the last element in the Vec
+    iterator data;        // first element in the Vec
+    iterator limit;       // one past the last element in the Vec
 };
 
 #endif // VEC_H
