@@ -1,7 +1,11 @@
 #ifndef STUDENT_INFO
 #define STUDENT_INFO
 
+#include <core.h>
+#include <grad.h>
+
 #include <iostream>
+#include <stdexcept>
 #include <string>
 
 class Student_info
@@ -9,7 +13,7 @@ class Student_info
 public:
     // constructors and copy control
     Student_info() : cp(0) { }
-    Student_info(std::istream& is) : cp(0) { read(std::istream& is); }
+    Student_info(std::istream& is) : cp(0) { read(is); }
     Student_info(const Student_info&);
     Student_info& operator=(const Student_info&);
     ~Student_info() { delete cp; }

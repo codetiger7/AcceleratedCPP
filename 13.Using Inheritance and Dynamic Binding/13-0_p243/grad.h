@@ -27,10 +27,11 @@ public:
         read_hw(in, homework);
         return in;
     }
-
+protected:
+    Grad* clone() const { return new Grad(*this); }
 
 private:
-    double thesis;\
+    double thesis;
 };
 
 #endif // GRAD

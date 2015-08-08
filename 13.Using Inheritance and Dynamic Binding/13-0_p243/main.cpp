@@ -1,4 +1,4 @@
-#include <grad.h>
+#include <student_info.h>
 
 #include <algorithm>
 #include <ios>              // streamsize
@@ -12,38 +12,31 @@ using namespace std;
 
 int main()
 {
-    vector<Core*> students;          // store pointers not objects
-    Core* record;                    // temp pointer as well
-    char ch;
+    vector<Student_info> students;
+    Student_info record;
     string::size_type maxlen = 0;
 
     // read and store the data
-    while ( cin >> ch)
+    while (record.read(cin))
     {
-        if( ch == 'U')
-            record = new Core;          // allocate a Core object
-        else
-            record = new Grad;          // allocate a new Grad object
-        record->read(cin);              // virtual call
-        maxlen = max( maxlen, record->name().size()); // dereference
+        maxlen = max( maxlen, record.name().size());
         students.push_back(record);
     }
 
     // pass the version of compare that works with pointers.
-    sort( students.begin(), students.end(), compare_Core_ptrs);
+    sort( students.begin(), students.end(), Student_info::compare);
 
 
     // write the names and grades
     cout << endl << endl;
-    for (vector<Core*>::size_type i = 0; i != students.size(); ++i)
+    for (vector<Student_info>::size_type i = 0; i != students.size(); ++i)
     {
-        // students[i] is a pointer that we dereference to call the functions
-        cout << students[i]->name()
-             << string(maxlen + 1 - students[i]->name().size(), ' ');
+        cout << students[i].name()
+             << string(maxlen + 1 - students[i].name().size(), ' ');
 
         try
         {
-            double final_grade = students[i]->grade();       // Grad::grade()
+            double final_grade = students[i].grade();       // Grad::grade()
             streamsize prec = cout.precision();
             cout << setprecision(3) << final_grade
                  << setprecision(prec) << endl;
@@ -53,7 +46,6 @@ int main()
             cout << e.what() << endl;
         }
 
-        delete students[i];     // free the object allocated when reading
     }
 
     cout << endl;

@@ -5,7 +5,8 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     core.cpp \
-    grade.cpp
+    grade.cpp \
+    student_info.cpp
 
 include(deployment.pri)
 qtcAddDeployment()

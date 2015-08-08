@@ -8,6 +8,7 @@
 
 class Core
 {
+    friend class Student_info;
 public:
     Core() : midterm(0), final(0) { }
     Core(std::istream& is) { read(is); }
@@ -20,6 +21,7 @@ public:
     virtual double grade() const;
 
 protected:
+    virtual Core* clone() const { return new Core(*this); }
     std::istream& read_common(std::istream&);
     double midterm;
     double final;
